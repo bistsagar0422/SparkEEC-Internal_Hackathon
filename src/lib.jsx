@@ -57,6 +57,32 @@ export function HoverBox({ as: Tag = 'div', base, hover, style, children, ...res
   );
 }
 
+/**
+ * Reactive media-query hook. Returns true while `query` matches the viewport,
+ * and updates on resize / orientation change. Used to switch inline layouts
+ * (e.g. multi-column → stacked) on phones and small tablets.
+ */
+export function useMediaQuery(query) {
+  const get = () =>
+    typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+      ? window.matchMedia(query).matches
+      : false;
+  const [matches, setMatches] = useState(get);
+  useEffect(() => {
+    const mql = window.matchMedia(query);
+    const onChange = () => setMatches(mql.matches);
+    onChange();
+    // addEventListener is the modern API; addListener is the Safari <14 fallback.
+    if (mql.addEventListener) mql.addEventListener('change', onChange);
+    else mql.addListener(onChange);
+    return () => {
+      if (mql.removeEventListener) mql.removeEventListener('change', onChange);
+      else mql.removeListener(onChange);
+    };
+  }, [query]);
+  return matches;
+}
+
 /** Countdown to `start`; reports live/over windows. Ticks every second. */
 export function useCountdown(startISO, endISO) {
   const [now, setNow] = useState(() => Date.now());

@@ -37,7 +37,7 @@ export const TRACK_DATA = [
 
 // Schedule tag palette
 export const TAG = {
-  cp:   { bg: 'rgba(240,86,159,0.12)', fg: '#f77fb8', bd: 'rgba(240,86,159,0.35)' },
+  cp:   { bg: 'rgba(43,184,245,0.12)', fg: '#6fccf7', bd: 'rgba(43,184,245,0.35)' },
   meal: { bg: 'rgba(95,139,255,0.12)', fg: '#8fb0ff', bd: 'rgba(95,139,255,0.35)' },
   fun:  { bg: 'rgba(160,107,245,0.14)', fg: '#c5a3fa', bd: 'rgba(160,107,245,0.4)' },
   key:  { bg: 'rgba(var(--wc),0.1)', fg: 'var(--fg-strong)', bd: 'rgba(var(--wc),0.3)' },
@@ -79,8 +79,8 @@ export const DAY2 = [
 
 export const PANELS = [
   {
-    title: 'Panel A — Technology', weight: '45%', accent: '#f0569f', fg: '#f77fb8',
-    bar: 'linear-gradient(90deg,#f0569f,#a06bf5)', delay: '0s',
+    title: 'Panel A — Technology', weight: '45%', accent: '#2bb8f5', fg: '#6fccf7',
+    bar: 'linear-gradient(90deg,#2bb8f5,#a06bf5)', delay: '0s',
     quote: '\u201cIs this well engineered, genuinely built here, and technically credible?\u201d',
     criteria: [
       ['Technical implementation & functionality', 35], ['Code quality & architecture', 20],
@@ -142,7 +142,7 @@ export const REG_STEPS = [
 ];
 
 export const TEAM_COL = [
-  { ring: 'rgba(240,86,159,0.4)', fg: '#f77fb8' },
+  { ring: 'rgba(43,184,245,0.4)', fg: '#6fccf7' },
   { ring: 'rgba(160,107,245,0.4)', fg: '#c5a3fa' },
   { ring: 'rgba(95,139,255,0.4)', fg: '#8fb0ff' },
 ];

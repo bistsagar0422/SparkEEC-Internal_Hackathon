@@ -28,6 +28,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Responsive safety net: never allow the page to scroll sideways on phones,
+   and keep media from spilling past its container regardless of browser
+   (Chrome, Edge, Safari, Firefox, Brave — desktop and mobile). */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -64,9 +81,9 @@ button {
   50% { opacity: 0.65; }
 }
 @keyframes pulseDot {
-  0% { box-shadow: 0 0 0 0 rgba(240, 86, 159, 0.65); }
-  70% { box-shadow: 0 0 0 9px rgba(240, 86, 159, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(240, 86, 159, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(43, 184, 245, 0.65); }
+  70% { box-shadow: 0 0 0 9px rgba(43, 184, 245, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(43, 184, 245, 0); }
 }
 @keyframes shimmer {
   0% { background-position: 0% center; }
@@ -81,7 +98,7 @@ button {
   to { transform: scaleX(1); }
 }
 @keyframes letterLoop {
-  0%, 100% { transform: translateY(0); color: #f0569f; text-shadow: 0 0 10px rgba(240,86,159,0.85), 0 0 22px rgba(240,86,159,0.4); }
+  0%, 100% { transform: translateY(0); color: #2bb8f5; text-shadow: 0 0 10px rgba(43,184,245,0.85), 0 0 22px rgba(43,184,245,0.4); }
   33% { transform: translateY(-4px); color: #c5a3fa; text-shadow: 0 0 10px rgba(160,107,245,0.9), 0 0 22px rgba(160,107,245,0.45); }
   66% { transform: translateY(2px); color: #5f8bff; text-shadow: 0 0 10px rgba(95,139,255,0.85), 0 0 22px rgba(95,139,255,0.4); }
 }
@@ -94,8 +111,8 @@ button {
    ============================================================ */
 
 :root {
-  --brand-ring: linear-gradient(140deg, #f0569f 0%, #a06bf5 52%, #5f8bff 100%);
-  --brand-line: linear-gradient(90deg, #f0569f, #a06bf5, #5f8bff);
+  --brand-ring: linear-gradient(140deg, #2bb8f5 0%, #a06bf5 52%, #5f8bff 100%);
+  --brand-line: linear-gradient(90deg, #2bb8f5, #a06bf5, #5f8bff);
   --card-surface: linear-gradient(180deg, rgba(var(--wc), 0.055), rgba(var(--wc), 0.02));
   --card-border: rgba(var(--wc), 0.09);
   --card-radius: 20px;
@@ -183,7 +200,7 @@ button:focus-visible,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(140deg, rgba(240, 86, 159, 0.22), rgba(95, 139, 255, 0.22));
+  background: linear-gradient(140deg, rgba(43, 184, 245, 0.22), rgba(95, 139, 255, 0.22));
   color: var(--fg-strong);
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
