@@ -5,6 +5,7 @@ import {
   FAQ_DATA, REG_STEPS, TEAM, initials, EVENT_START, EVENT_END,
 } from './data.js';
 import qrRegister from './qr-register.svg';
+import rulebookPdf from './assets/SparkEEC_1_0_Rulebook.pdf';
 import sociseLogo from './assets/socise logo.jpg';
 import awsLogo from './assets/aws logo.jpg';
 import everestLogo from './assets/everest logo.jpg';
@@ -221,6 +222,7 @@ function Home({ go, cd }) {
           <div style={sx('display:flex;gap:14px;margin-top:16px;flex-wrap:wrap;justify-content:center;animation:fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s both')}>
             <HoverBox as="button" onClick={() => go('register')} base="cursor:pointer;border:none;border-radius:999px;padding:16px 36px;font-size:16px;font-weight:600;color:#ffffff;background:linear-gradient(96deg,#2bb8f5,#a06bf5,#5f8bff);box-shadow:0 10px 34px rgba(160,107,245,0.35);transition:transform 0.25s,box-shadow 0.25s" hover="transform:translateY(-3px);box-shadow:0 16px 48px rgba(160,107,245,0.55)">Register your team →</HoverBox>
             <HoverBox as="button" onClick={() => go('tracks')} base="cursor:pointer;border:1px solid rgba(var(--wc),0.2);border-radius:999px;padding:16px 36px;font-size:16px;font-weight:500;color:var(--fg);background:rgba(var(--wc),0.04);transition:transform 0.25s,background 0.25s" hover="transform:translateY(-3px);background:rgba(var(--wc),0.09)">Explore the tracks</HoverBox>
+            <HoverBox as="a" href={rulebookPdf} download="SparkEEC-1.0-Rulebook.pdf" base="cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;border:1px solid rgba(var(--wc),0.2);border-radius:999px;padding:16px 36px;font-size:16px;font-weight:500;color:var(--fg);background:rgba(var(--wc),0.04);transition:transform 0.25s,background 0.25s" hover="transform:translateY(-3px);background:rgba(var(--wc),0.09)">↓ Download the Rulebook</HoverBox>
           </div>
           <div style={sx("font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);animation:fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.6s both")}>Entry fee NPR 25 · Teams of 2–4 · EEC students only</div>
         </div>
@@ -591,7 +593,7 @@ function Rules() {
           <h2 style={sx('margin:14px 0 14px;font-size:clamp(32px,4.5vw,50px);font-weight:700;letter-spacing:-0.02em')}>The rules that keep it fair</h2>
           <p style={sx('margin:0;font-size:18px;line-height:1.7;color:var(--muted)')}>Highlights from the Official Rulebook v1.0 — binding on everyone present. Registering constitutes acceptance.</p>
         </div>
-        <HoverBox as="a" href="#" base="flex:none;text-decoration:none;border:1px solid rgba(var(--wc),0.2);border-radius:999px;padding:14px 28px;font-size:14.5px;font-weight:500;color:var(--fg);background:rgba(var(--wc),0.04);transition:background 0.25s" hover="background:rgba(var(--wc),0.09)">↓ Download the full Rulebook</HoverBox>
+        <HoverBox as="a" href={rulebookPdf} download="SparkEEC-1.0-Rulebook.pdf" base="flex:none;text-decoration:none;border:1px solid rgba(var(--wc),0.2);border-radius:999px;padding:14px 28px;font-size:14.5px;font-weight:500;color:var(--fg);background:rgba(var(--wc),0.04);transition:background 0.25s" hover="background:rgba(var(--wc),0.09)">↓ Download the full Rulebook</HoverBox>
       </div>
 
       <div style={sx('display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:18px;margin-bottom:88px')}>
@@ -715,7 +717,8 @@ function Footer({ go }) {
       <div style={sx('max-width:1160px;margin:0 auto;padding:56px 28px 40px')}>
         <div style={sx('display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap')}>
           <div style={sx('max-width:360px')}>
-            <div style={sx('display:flex;align-items:baseline;gap:8px;margin-bottom:12px')}>
+            <div style={sx('display:flex;align-items:center;gap:10px;margin-bottom:12px')}>
+              <LogoMark size={30} radius={8} />
               <span style={sx('font-size:20px;font-weight:700;letter-spacing:-0.02em;color:var(--fg-strong)')}>Spark<span style={sx('background:linear-gradient(96deg,#2bb8f5,#a06bf5,#5f8bff,#2bb8f5);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 5s linear infinite')}>EEC</span></span>
               <span style={sx("font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);border:1px solid rgba(var(--wc),0.14);border-radius:6px;padding:2px 6px")}>1.0</span>
             </div>
@@ -744,7 +747,6 @@ function Footer({ go }) {
         </div>
         <div style={sx("margin-top:44px;padding-top:24px;border-top:1px solid rgba(var(--wc),0.06);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted)")}>
           <span>© 2026 SOCISE-EEC · Everest Engineering College</span>
-          <span>Rulebook v1.0 · Issued 2 July 2026</span>
         </div>
       </div>
     </div>
