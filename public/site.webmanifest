@@ -1,0 +1,18 @@
+{
+  "name": "SparkEEC 1.0 — 27-Hour Hackathon",
+  "short_name": "SparkEEC",
+  "description": "Everest Engineering College's first flagship hackathon. 17–18 July 2026.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#070710",
+  "theme_color": "#070710",
+  "icons": [
+    {
+      "src": "./sparkeec-logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

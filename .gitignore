@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# local env / editor / OS
+*.local
+.env
+.env.*
+.vite/
+.DS_Store
+Thumbs.db
