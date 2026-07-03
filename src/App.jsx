@@ -28,7 +28,7 @@ const MEMBER_PHOTOS = {
   'Sagar Bist': { src: sagarPhoto, pos: 'center 28%' },
   'Neha Pal': { src: nehaPalPhoto, pos: 'center 25%' },
   'Samin Thapa': { src: saminThapaPhoto, pos: 'center 22%' },
-  'Subash Bhatta': { src: subashBhattaPhoto, pos: 'center 20%' },
+  'Subash Raj Bhatta': { src: subashBhattaPhoto, pos: 'center 20%' },
   'Swornima C Tamang': { src: swornimaPhoto, pos: 'center 25%' },
   'Rehan Lamichhane': { src: rehanPhoto, pos: 'center 12%' },
   'Piyush Chand': { src: piyushPhoto, pos: 'center 20%' },

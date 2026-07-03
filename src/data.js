@@ -152,7 +152,7 @@ export const TEAM = [
   ['Neha Pal', 'Program & Logistics'],
   ['Samin Thapa', 'Sponsorship & Finance'],
   ['Piyush Chand', 'Documentation & Media'],
-  ['Subash Bhatta', 'Hospitality & Volunteers'],
+  ['Subash Raj Bhatta', 'Hospitality & Volunteers'],
   ['Swornima C Tamang', 'Marketing & Outreach'],
   ['Rehan Lamichhane', 'Technical & IT'],
 ];
